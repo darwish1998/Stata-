@@ -1,0 +1,141 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\darwi\OneDrive\Documents\Datascience\Stata\my-out-put.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}29 Aug 2022, 10:06:34
+
+{com}. do "C:\Users\darwi\AppData\Local\Temp\STD00000000.tmp"
+{txt}
+{com}. browse
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. descripe
+{err}command {bf}descripe{sf} is unrecognized
+{txt}{search r(199), local:r(199);}
+
+{com}. describe
+
+{txt}Contains data
+  obs:{res}             8                          
+{txt} vars:{res}             5                          
+{txt} size:{res}           136                          
+{txt}{hline}
+              storage   display    value
+variable name   type    format     label      variable label
+{hline}
+{p 0 48}{res}{bind:id             }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}ID{p_end}
+{p 0 48}{bind:name           }{txt}{bind: str13   }{bind:{txt}%13s      }{space 1}{bind:         }{bind:  }{res}{res}Name {p_end}
+{p 0 48}{bind:ageofresponse  }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}Age of response {p_end}
+{p 0 48}{bind:sex            }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:sex      }{bind:  }{res}{res}sex{p_end}
+{p 0 48}{bind:education_level}{txt}{bind: byte    }{bind:{txt}%10.0g    }{space 1}{txt}education_level{p_end}
+{p 0 48}{space 44}{bind:  }{res}{res}education level {p_end}
+{txt}{hline}
+Sorted by: 
+{res}     Note: Dataset has changed since last saved.
+
+{com}. do "C:\Users\darwi\AppData\Local\Temp\STD00000000.tmp"
+{txt}
+{com}. browse
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. log using "C:\Users\darwi\OneDrive\Documents\Datascience\Stata\my-out-put.smcl"
+{err}log file already open
+{txt}{search r(604), local:r(604);}
+
+{com}. codebook
+
+{txt}{hline}
+{res}id{right:ID}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+
+{col 18}range:  [{res}1{txt},{res}8{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}8{col 51}{txt}missing .:  {res}0{txt}/{res}8
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}         1{col 33}1
+{col 21}         1{col 33}2
+{col 21}         1{col 33}3
+{col 21}         1{col 33}4
+{col 21}         1{col 33}5
+{col 21}         1{col 33}6
+{col 21}         1{col 33}7
+{col 21}         1{col 33}8
+
+{txt}{hline}
+{res}name{right:Name }
+{txt}{hline}
+
+{col 19}type:  string ({res}str13{txt})
+
+{col 10}unique values:  {res}8{col 51}{txt}missing "":  {res}0{txt}/{res}8
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}         1{col 33}"Abdinasir "
+{col 21}         1{col 33}"Ahmed "
+{col 21}         1{col 33}"Cade ka cade "
+{col 21}         1{col 33}"Ethene"
+{col 21}         1{col 33}"Farhiyo "
+{col 21}         1{col 33}"Maya "
+{col 21}         1{col 33}"Umu kalthuum"
+{col 21}         1{col 33}"Xalimo"
+
+{txt}{col 16}warning:  variable has embedded and trailing blanks
+
+{txt}{hline}
+{res}ageofresponse{right:Age of response }
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+
+{col 18}range:  [{res}12{txt},{res}67{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}7{col 51}{txt}missing .:  {res}0{txt}/{res}8
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}         1{col 33}12
+{col 21}         1{col 33}18
+{col 21}         1{col 33}19
+{col 21}         1{col 33}20
+{col 21}         2{col 33}30
+{col 21}         1{col 33}50
+{col 21}         1{col 33}67
+
+{txt}{hline}
+{res}sex{right:sex}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+{ralign 22:label}:  {res:sex}
+
+{col 18}range:  [{res}1{txt},{res}2{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}2{col 51}{txt}missing .:  {res}0{txt}/{res}8
+
+{txt}{col 13}tabulation:  Freq.   Numeric  Label
+{col 21}{res}         4{col 33}       1{col 43}{txt}male
+{col 21}{res}         4{col 33}       2{col 43}{txt}female
+
+{txt}{hline}
+{res}education_level{right:education level }
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+{ralign 22:label}:  {res:education_level}
+
+{col 18}range:  [{res}1{txt},{res}4{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}4{col 51}{txt}missing .:  {res}0{txt}/{res}8
+
+{txt}{col 13}tabulation:  Freq.   Numeric  Label
+{col 21}{res}         2{col 33}       1{col 43}{txt}premimary
+{col 21}{res}         2{col 33}       2{col 43}{txt}secondery
+{col 21}{res}         3{col 33}       3{col 43}{txt}diploma
+{col 21}{res}         1{col 33}       4{col 43}{txt}University
+
+{com}. help su
+
+. 
